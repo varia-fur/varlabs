@@ -21,9 +21,16 @@ h1 {
     font-family: chippyfontregular;
     margin-top: 1px;
 }
+.thingie {
+    position: relative;
+    bottom: -10px;
+}
+.thingie:hover {
+  filter: invert(1);
+}
 a.links {
     color: #000000;
-    font-size: 2.5em;
+    font-size: 50px;
 }
 a.links:hover {
     color: #ffffff;
