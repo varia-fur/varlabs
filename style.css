@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'chippyfontregular';
+    src: url('chippyfont-regular-webfont.woff2') format('woff2'),
+         url('chippyfont-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    color: #000000;
+    font-size: 4em;
+    text-align: center;
+    font-family: chippyfontregular;
+    margin-top: 1px;
+}
+a.links {
+    color: #000000;
+}
+a.links:hover {
+    color: #FFFFFF;
+}
+.text-hr {
+  border: none;
+  height: 1.5em;
+  background: none;
+  position: relative;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  overflow: visible;
+}
+.text-hr-content {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #000;
+  font-size: 1.5em;
+  text-align: center;
+  background: #aa00ff;
+  letter-spacing: 0.1em;
+  font-family: chippyfontregular, monospace;
+  line-height: 1.5em;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2200cc;
+  color: white;
+  text-align: center;
+  height: 10dvh;
+  font-size: 2dvh;
+  font-family: chippyfontregular;
+  padding-top: 0%;
+}
+body {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+html
+{
+    background-color: #aa00ff;
+    color: #000000;
+    font-family: 'chippyfontregular';
+} 
+
