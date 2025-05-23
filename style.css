@@ -16,21 +16,21 @@
 }
 h1 {
     color: #000000;
-    font-size: 5em;
+    font-size: 75px;
     text-align: center;
     font-family: chippyfontregular;
     margin-top: 1px;
 }
 a.links {
     color: #000000;
-    font-size: 2.5em;
+    font-size: 11dvw;
 }
 a.links:hover {
     color: #ffffff;
 }
 .text-hr {
   border: none;
-  height: 1.5em;
+  height: 6px;
   background: none;
   position: relative;
   margin-left: 0px;
@@ -44,12 +44,12 @@ a.links:hover {
   white-space: nowrap;
   overflow: hidden;
   color: #000;
-  font-size: 1.5em;
+  font-size: 25px;
   text-align: center;
   background: #aa00ff;
-  letter-spacing: 0.1em;
+  letter-spacing: 2px;
   font-family: chippyfontregular, monospace;
-  line-height: 1.5em;
+  line-height: 20px;
 }
 footer {
   position: fixed;

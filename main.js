@@ -14,7 +14,7 @@ function updateTextHr() {
     span.className = 'text-hr-content';
     let text = ':3';
     // Estimate how many times to repeat based on width and font size
-    const repeatCount = Math.ceil(hr.offsetWidth / 16.5);
+    const repeatCount = Math.ceil(hr.offsetWidth / 10);
     span.textContent = text.repeat(repeatCount);
     hr.replaceWith(span);
   });
