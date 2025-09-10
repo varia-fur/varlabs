@@ -14,6 +14,36 @@
     line-height: 100%;
     margin-bottom: 0px;
 }
+nav {
+    background-color: #2200cc; /* Dark background */
+    position: fixed; /* Fixed position at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensure it stays on top of other content */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Clear floats */
+}
+
+nav li {
+    float: left; /* Float list items to create a horizontal menu */
+}
+
+nav a {
+    display: block; /* Make the entire link clickable */
+    color: white; /* White text */
+    text-align: center; /* Center the text */
+    padding: 14px 16px; /* Add some padding */
+    text-decoration: none; /* Remove underlines */
+}
+nav a:hover {
+    background-color: #000; /* Darker background on hover */
+}
 h1 {
     color: #000000;
     font-size: 75px;
@@ -35,17 +65,20 @@ a.links {
 a.links:hover {
     color: #ffffff;
 }
-.text-hr {
+hr.funny-face {
   border: none;
-  height: 6px;
-  background: none;
+  height: 30px; /* You can adjust this height */
+  background-image: url('./cat.svg');
+  background-repeat: repeat-x;
+  background-size: 20px 20px;
+  background-position: center;
   position: relative;
   margin-left: 0px;
   margin-right: 0px;
   width: 100%;
   overflow: visible;
 }
-.text-hr-content {
+/*.text-hr-content {
   display: block;
   width: 100%;
   white-space: nowrap;
@@ -54,10 +87,10 @@ a.links:hover {
   font-size: 25px;
   text-align: center;
   background: #aa00ff;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
   font-family: chippyfontregular, monospace;
   line-height: 20px;
-}
+}*/
 footer {
   position: fixed;
   left: 0;
@@ -71,16 +104,18 @@ footer {
   font-family: chippyfontregular;
   padding-top: 0%;
 }
+
+
 body {
+    margin-top: 50px; /* Add margin to the body to prevent content from being hidden behind the navbar */
     margin-left: 0px;
     margin-right: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom:10dvh;
 }
 html
 {
     background-color: #aa00ff;
     color: #000000;
     font-family: 'chippyfontregular';
-} 
+}
 
