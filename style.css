@@ -5,6 +5,10 @@
     font-weight: normal;
     font-style: normal;
 }
+.link:hover {
+    color: #FFF;
+    border: #000 6px solid;
+}
 .portfolio_section {
     display: flex;
     align-items: center;
@@ -103,11 +107,11 @@ h1 {
 .thingie:hover {
   filter: invert(1);
 }
-a.links {
+a.socials {
     color: #000000;
     font-size: 50px;
 }
-a.links:hover {
+a.socials:hover {
     color: #ffffff;
 }
 hr.funny-face {
