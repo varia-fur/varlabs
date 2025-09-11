@@ -5,8 +5,44 @@
     font-weight: normal;
     font-style: normal;
 }
+.portfolio_section {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.portfolio_section.aaa {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio_img {
+    width: 50dvw;
+    height: auto;
+    margin-right: 20px;
+}
+.portfolio_img_badge {
+    width: 20dvw;
+    height: auto;
+}
+.portfolio_des_text {
+    font-size: 2.5em;
+    font-family: chippyfontregular;
+    margin-top: 0px;
+    line-height: 100%;
+  }
+.kofi_logo {
+    width: 20%;
+    height: auto;
+    position: static;
+}
+.portfolio_callout {
+    font-size: 2.5em;
+    text-align: left;
+    font-family: chippyfontregular;
+    margin-top: 0px;
+    line-height: 100%;
+}
 .des_text {
-    color: #000000;
     font-size: 2.5em;
     text-align: left;
     font-family: chippyfontregular;
@@ -22,12 +58,19 @@ nav {
     width: 100%;
     z-index: 100; /* Ensure it stays on top of other content */
 }
-
+h2 {
+    color: #000000;
+    font-size: 50px;
+    text-align: center;
+    font-family: chippyfontregular;
+    margin-top: 0px;
+    margin-bottom: -4px;
+}
 nav ul {
     list-style-type: none; /* Remove bullet points */
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Clear floats */
+ /* Clear floats */
 }
 
 nav li {
@@ -36,9 +79,10 @@ nav li {
 
 nav a {
     display: block; /* Make the entire link clickable */
+    font-size: 30px;
     color: white; /* White text */
     text-align: center; /* Center the text */
-    padding: 14px 16px; /* Add some padding */
+    padding: 8px 16px; /* Add some padding */
     text-decoration: none; /* Remove underlines */
 }
 nav a:hover {
@@ -50,6 +94,7 @@ h1 {
     text-align: center;
     font-family: chippyfontregular;
     margin-top: 1px;
+    margin-bottom: -4px;
 }
 .thingie {
     position: relative;
@@ -118,4 +163,3 @@ html
     color: #000000;
     font-family: 'chippyfontregular';
 }
-
