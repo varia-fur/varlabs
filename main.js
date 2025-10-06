@@ -5,7 +5,7 @@
 	try {
 		var path = window.location.pathname || window.location.href;
 		// Only show gate on the After Dark page (AD.html)
-		if (!path.endsWith('/AD.html') && !path.endsWith('AD.html')) return;
+		if (!path.startsWith('/AD')) return;
 
 		var storageKey = 'varlabs_ad_allowed';
 		if (localStorage.getItem(storageKey) === '1') return; // already allowed
