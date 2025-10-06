@@ -61,7 +61,7 @@ nav {
     left: 0;
     width: 100%;
     z-index: 100; /* Ensure it stays on top of other content */
-}
+    }
 h2 {
     color: #000000;
     font-size: 50px;
@@ -71,26 +71,26 @@ h2 {
     margin-bottom: -4px;
 }
 nav ul {
-    list-style-type: none; /* Remove bullet points */
+    list-style-type: none; 
     margin: 0;
     padding: 0;
  /* Clear floats */
 }
 
 nav li {
-    float: left; /* Float list items to create a horizontal menu */
+    float: left; 
 }
 
 nav a {
     display: block; /* Make the entire link clickable */
-    font-size: 30px;
+    font-size: 5dvh;
     color: white; /* White text */
-    text-align: center; /* Center the text */
-    padding: 8px 16px; /* Add some padding */
-    text-decoration: none; /* Remove underlines */
+    text-align: center; 
+    padding: 1dvw 3vw;
+    text-decoration: none; 
 }
 nav a:hover {
-    background-color: #000; /* Darker background on hover */
+    background-color: #000;
 }
 h1 {
     color: #000000;
@@ -156,7 +156,7 @@ footer {
 
 
 body {
-    margin-top: 50px; /* Add margin to the body to prevent content from being hidden behind the navbar */
+    margin-top: 10dvh; /* Add margin to the body to prevent content from being hidden behind the navbar */
     margin-left: 0px;
     margin-right: 0px;
     margin-bottom:10dvh;
