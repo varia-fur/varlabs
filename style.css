@@ -167,3 +167,39 @@ html
     color: #000000;
     font-family: 'chippyfontregular';
 }
+
+/* Age-gate modal styles (used by AD.html via main.js) */
+#varlabs-age-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+.varlabs-age-modal {
+    background: #fff;
+    color: #000;
+    padding: 2.5rem;
+    border-radius: 8px;
+    max-width: 520px;
+    width: calc(100% - 4rem);
+    text-align: center;
+    font-family: chippyfontregular, sans-serif;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+}
+.varlabs-age-modal h2 { margin-top: 0; font-size: 2rem; }
+.varlabs-age-actions { margin-top: 1.25rem; display: flex; gap: 1rem; justify-content: center; }
+.varlabs-age-actions button { font-size: 1.1rem; padding: 0.5rem 1rem; border-radius: 6px; border: none; cursor: pointer; }
+.varlabs-age-actions #varlabs-enter { background: #2200cc; color: #fff; }
+.varlabs-age-actions #varlabs-leave { background: #eee; color: #000; }
+.varlabs-age-note { display: block; margin-top: 0.75rem; font-size: 0.8rem; color: #333; }
+
+/* small styles for password input in Local-services gate */
+#varlabs-pass { width: 100%; padding: 0.6rem 0.5rem; margin-top: 0.75rem; border-radius: 6px; border: 1px solid #ccc; font-size: 1rem; }
+#varlabs-pass:focus { outline: none; box-shadow: 0 0 0 3px rgba(34,0,204,0.15); border-color: #2200cc; }
+
+/* reset local choices button */
+.reset-local { background:#2200cc; color:#fff; border:none; padding:0.5rem 0.75rem; border-radius:6px; cursor:pointer; }
+.reset-local:hover { background:#000; }
