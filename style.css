@@ -203,3 +203,38 @@ html
 /* reset local choices button */
 .reset-local { background:#2200cc; color:#fff; border:none; padding:0.5rem 0.75rem; border-radius:6px; cursor:pointer; }
 .reset-local:hover { background:#000; }
+
+/* CSS lightbox using :target */
+.varlabs-lightbox {
+    /* start hidden and transparent; immediate show/hide (no animation) */
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.0);
+    z-index: 20000;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    opacity: 0;
+    /* no transition to avoid animation-related issues on some servers/browsers */
+    pointer-events: none; /* prevent clicks when hidden */
+}
+.varlabs-lightbox:target {
+    display: flex;
+    opacity: 1;
+    background: rgba(0,0,0,0.9);
+    pointer-events: auto;
+}
+.varlabs-lightbox img {
+    max-width: 95vw;
+    max-height: 95vh;
+    border-radius: 6px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    z-index: 2;
+    /* no transform or transition to keep the lightbox immediate */
+    opacity: 0.98;
+}
+
+.varlabs-lightbox .dismiss { position: absolute; inset: 0; z-index: 1; display: block; cursor: pointer; }
+.varlabs-lightbox .close { position: absolute; top: 1rem; right: 1rem; color: #fff; text-decoration: none; font-size: 2rem; z-index: 3; }
+.varlabs-lightbox .close::after { content: "×"; }
