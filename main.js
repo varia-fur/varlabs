@@ -1,34 +1,46 @@
 // Age-gate and small site helpers for varlabs
 // This file intentionally minimal — only runs the age-gate on AD.html
 
+
 (function () {
+	function showAgeGate() {
+		try {
+			var storageKey = 'varlabs_ad_allowed';
+			if (localStorage.getItem(storageKey) === '1') return; // already allowed
+
+			var overlay = document.createElement('div');
+			overlay.id = 'varlabs-age-overlay';
+			overlay.innerHTML = '\n      <div class="varlabs-age-modal">\n        <h2>After Dark</h2>\n        <p>This page contains mature content. Are you 18 or older and wish to proceed?</p>\n        <div class="varlabs-age-actions">\n          <button id="varlabs-enter">Enter</button>\n          <button id="varlabs-leave">Leave</button>\n        </div>\n        <small class="varlabs-age-note">Your choice is stored locally on this device.</small>\n      </div>';
+
+			document.documentElement.appendChild(overlay);
+
+			// wire buttons
+			document.getElementById('varlabs-enter').addEventListener('click', function () {
+				try { localStorage.setItem(storageKey, '1'); } catch (e) { /* ignore */ }
+				document.getElementById('varlabs-age-overlay').remove();
+			});
+
+			document.getElementById('varlabs-leave').addEventListener('click', function () {
+				window.location.href = '/index.html';
+			});
+		} catch (err) {
+			alert('Unable to show age gate overlay. Please use a modern browser.');
+			console.error('varlabs age gate error', err);
+		}
+	}
+
 	try {
 		var path = window.location.pathname || window.location.href;
-		// Only show gate on the After Dark page (AD.html)
+		// Use startsWith to allow wildcard matching like /AD, /AD/, /AD.html, /AD/anything
 		if (!path.startsWith('/AD')) return;
 
-		var storageKey = 'varlabs_ad_allowed';
-		if (localStorage.getItem(storageKey) === '1') return; // already allowed
-
-		// create modal
-		var overlay = document.createElement('div');
-		overlay.id = 'varlabs-age-overlay';
-		overlay.innerHTML = '\n      <div class="varlabs-age-modal">\n        <h2>After Dark</h2>\n        <p>This page contains mature content. Are you 18 or older and wish to proceed?</p>\n        <div class="varlabs-age-actions">\n          <button id="varlabs-enter">Enter</button>\n          <button id="varlabs-leave">Leave</button>\n        </div>\n        <small class="varlabs-age-note">Your choice is stored locally on this device.</small>\n      </div>';
-
-		document.documentElement.appendChild(overlay);
-
-		// wire buttons
-		document.getElementById('varlabs-enter').addEventListener('click', function () {
-			try { localStorage.setItem(storageKey, '1'); } catch (e) { /* ignore */ }
-			document.getElementById('varlabs-age-overlay').remove();
-		});
-
-		document.getElementById('varlabs-leave').addEventListener('click', function () {
-			// redirect to home - match site structure
-			window.location.href = '/index.html';
-		});
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', showAgeGate);
+		} else {
+			showAgeGate();
+		}
 	} catch (err) {
-		// fail silently - don't break the page
+		alert('Unable to show age gate overlay. Please use a modern browser.');
 		console.error('varlabs age gate error', err);
 	}
 })();
